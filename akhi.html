@@ -1,0 +1,181 @@
+<html>
+<head>
+<title></title>
+</head>
+<script >
+
+imageArray=new Array;
+
+imageArray[0]=new Image;
+imageArray[0].src="ball0.gif";
+
+imageArray[1]=new Image;
+imageArray[1].src="ball1.gif";
+
+imageArray[2]=new Image;
+imageArray[2].src="ball2.gif";
+
+imageArray[3]=new Image;
+imageArray[3].src="ball3.gif";
+
+imageArray[4]=new Image;
+imageArray[4].src="ball4.gif";
+
+imageArray[5]=new Image;
+imageArray[5].src="ball5.gif";
+
+function bounce(){
+
+	setTimeout("document.images['ball'].src=imageArray[0].src",100);
+
+	setTimeout("document.images['ball'].src=imageArray[1].src",200);
+
+	setTimeout("document.images['ball'].src=imageArray[2].src",300);
+
+	setTimeout("document.images['ball'].src=imageArray[3].src",400);
+
+	setTimeout("document.images['ball'].src=imageArray[4].src",500);
+
+	setTimeout("document.images['ball'].src=imageArray[5].src",600);
+
+	setTimeout("document.images['ball'].src=imageArray[4].src",700);
+
+	setTimeout("document.images['ball'].src=imageArray[3].src",800);
+
+	setTimeout("document.images['ball'].src=imageArray[2].src",900);
+
+	setTimeout("document.images['ball'].src=imageArray[1].src",1000);
+
+	setTimeout("document.images['ball'].src=imageArray[0].src",1100);
+
+}
+
+function startTime()
+{
+var today=new Date();
+var h=today.getHours();
+var m=today.getMinutes();
+var s=today.getSeconds();
+// add a zero in front of numbers<10
+m=checkTime(m);
+s=checkTime(s);
+document.getElementById('txt').innerHTML=h+":"+m+":"+s;
+t=setTimeout(function(){startTime()},500);
+}
+
+function checkTime(i)
+{
+if (i<10)
+  {
+  i="0" + i;
+  }
+return i;
+}
+
+</script>
+<style>
+.one
+{
+margin-left:0px;
+position:absolute;
+}
+
+.two
+{
+font-family:Arial;
+font-size:50px;
+}
+
+.three
+{
+font-size:60px;
+}
+
+.four
+{
+margin-right:0px;
+margin-left:600px;
+margin-top:50px;
+margin-bottom:60px;
+position:absolute;
+}
+</style>
+<body onload="startTime()">
+
+<h1 class="two"><center><em>Team-A4</em> </center></h1>
+<center>
+<p>
+Team Members:
+03.Akashdeep
+05.Ameena
+36.Ganga
+57.Shilpashree
+</p>
+</center>
+<br>
+<br>
+<DIV ALIGN="left" class="one">
+  <CENTER>
+  <TABLE WIDTH="95%" CELLPADDING="0" CELLSPACING="0">
+    <TR>
+      <TD VALIGN="top">
+        
+        <H1 ALIGN="center"><FONT COLOR="#808080">Bouncing Ball</FONT></H1>
+        <P ALIGN="center"><FONT FACE="arial,geneva,helvetica"><IMG SRC="images/ball0.gif" NAME="ball" width="75" height="300"></P>
+		
+        <FORM>
+          <DIV ALIGN="center">
+            <CENTER>
+            <P><INPUT TYPE="button" ONCLICK="bounce()" VALUE="Bounce"></P>
+			</TD>
+            </CENTER>
+          </DIV>
+        </FORM>
+        
+       </TR>
+  </TABLE>
+  </CENTER>
+</DIV>
+<br>
+<br>
+<div align="center" id="txt" class="three">
+</div>
+
+<br>
+<br>
+<div align="right" class="four">
+<table>
+<tr>
+<th>
+<!--<marquee direction="right">
+<img src="images/slide/0.gif"> 
+</marquee>
+</th>
+<th>
+<marquee direction="left">
+<img src="images/slide/00.gif"> 
+</marquee>
+</th>
+</tr>
+<tr />
+<tr />
+<tr>-->
+<marquee direction="up">
+<h1><font color="orange">This is TeamA4</font></h1>
+</marquee>
+</tr>
+<tr>
+<marquee direction="down">
+<h1><font color="blue">Team of 4 members</font></h1>
+</marquee>
+</tr>
+<tr>
+<marquee direction="alternate">
+<h1><font color="green">BVBISE</font></h1>
+</marquee>
+</tr>
+
+</table>
+</div>
+</body>
+</html>
